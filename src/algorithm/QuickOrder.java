@@ -15,7 +15,12 @@ public class QuickOrder {
 			System.out.print(value+",");
 		}
 	}
-	
+	/*
+	 * 分治思想：以选定的值作为基准，大小分两边。 如此循环，
+	 * 最终得到一个有序的列表。
+	 * 
+	 * 平均算法步骤O(NlogN)，最坏的情况是O(N*N)
+	 * */
 	public static void quickOrder(int[] list,int low, int high){
 		if(low < high){
 			int middle = getMiddle(list,low,high);
